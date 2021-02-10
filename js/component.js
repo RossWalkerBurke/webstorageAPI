@@ -253,41 +253,41 @@ function buttonOnClickJump()
     
     // to change image to image3  (run to jump)    
     image = image3
-
-
 }
  
 
-// readJSONFromURL('./data/level.json', function (err, data) {
-//     if (err != null) {
-//       console.error(err);
-//     } else {
-//       var text = data["Pawns"];
-//       console.log(text);
-//       var text = data["Grunts"];
-//       console.log(text);
-//       var text = data["Boss"];
-//       console.log(text);
-//     }
-//     });
+ readJSONFromURL('./data/level.json', function (err, data) {
+     if (err != null) {
+       console.error(err);
+     } else {
+       var text = data["Pawns"];
+       console.log(text);
+       var text = data["Grunts"];
+       console.log(text);
+       var text = data["Boss"];
+       console.log(text);
+     }
+    });
 
-//   // Reading File from a Server
+   // Reading File from a Server
 
-//   var xmlhttp = new XMLHttpRequest();
-//   xmlhttp.onreadystatechange = function () {
-//     if (this.readyState == 4 && this.status == 200) {
-//       var data = JSON.parse(this.responseText);
-//       document.getElementById("NPC").innerHTML = data[0];
-//     }
-//   };
-//   xmlhttp.open("GET", "./data/level.json", true);
-//   xmlhttp.send();
+   var xmlhttp = new XMLHttpRequest();
+   xmlhttp.onreadystatechange = function () {
+     if (this.readyState == 4 && this.status == 200) {
+       var data = JSON.parse(this.responseText);
+       document.getElementById("NPC").innerHTML = data[0];
+     }
+   };
+   xmlhttp.open("GET", "./data/level.json", true);
+   xmlhttp.send();
 
 
 
 // Update the player score
 function updateScore() {
   
+// this code is local storage on the clicks people do as score
+
   var score= 1;
   var current_score = localStorage.getItem('score');
 
@@ -304,13 +304,5 @@ function updateScore() {
     localStorage.setItem('score', parseInt(current_score) + 1);
     document.getElementById("SCORE").innerHTML = " [ " + current_score + " ] ";
   } */
-
-
 }
     updateScore();
-
-//notes: 
-//add code for if the player touches the spike gets reset
-//work on jump 
-//get the image to change
-//bug: if the player jumps they can keep jumping even past the boundry where the boundry code doesnt let the player back in
