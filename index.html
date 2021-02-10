@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<title>Test Form</title>
+<meta charset="utf-8">
+
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+
+    <!-- var href = window.location.href
+    href will be equal to "https://muddygames.bitbucket.io/form/index.html?enemy=boss"
+    
+    var protocol = window.location.protocol
+    protocol will be equal to "https:"
+    
+    var host = window.location.host
+    host will be equal to "muddygames.bitbucket.io"
+    
+    var pathname = window.location.pathname
+    pathname will be equal to “/form/index.html”
+    
+    var search = window.location.search 
+    search will be equal to “?enemy=boss" -->
+
+<form action="https://rosswalkerburke.github.io/game" method="GET" target="_blank">
+
+<!-- code to aid understanding
+<input type="text" name="q" value="pwa"> -->
+
+<input type="text" name="username" value="username">
+
+<input type="password" name="password" value="password">
+
+<input type="radio" name="radiobutton" value="val1">Forest run<br>
+<input type="radio" name="radiobutton" value="val2">street run<br>
+
+<input type= "hidden" name="wallet" value="ross">
+
+<select name= "select">
+<option value="red">red</option>
+<option value="blue">blue</option>
+<option value="green">green</option>
+</select>
+
+<button type="reset">reset</button>
+<button type="submit">play game</button>
+
+</form>
+
+<h1>Request Parameters</h1>
+<!--
+Commented out, you can replace action="." with action="url_to_your_game" e.g https://muddygames.bitbucket.io/game/index.html
+<form action="." method="get">
+    <input type="text" value="test" name="gamertag">
+    <button type="submit">Submit</button>
+  </form>
+    -->
+
+<script>
+function onPageLoad() {
+var href = window.location.href;
+    alert(href);
+   
+    var protocol = window.location.protocol;
+    alert(protocol);
+   
+    var host = window.location.host;
+    alert(host);
+   
+   
+    var pathname = window.location.pathname;
+    alert(pathname);
+   
+    var search = window.location.search;
+    alert(search);
+   
+}
+</script>
+
+</body>
+<script src="./data/level.json"></script>
+<script src="./js/component.js"></script>
+
+</html>
